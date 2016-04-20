@@ -5,22 +5,60 @@
 	<title>Binned'er</title>
 
 	<!-- ADDING FONT -->
-	<link href='https://fonts.googleapis.com/css?family=Maven+Pro:400,700' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Maven+Pro:400' rel='stylesheet' type='text/css'>
 
 	<!-- ADDING STYLES -->
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/style.css">
+	<style>
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	</style>
 </head>
 <body>
-	<header>
-		<h1>Binned'er</h1>
-	</header>
+	<div id="stage">
+		<header>
+			<h1>Binned'er</h1>
+		</header>
 
-	<div id="test" style="width:100vw;height:100vh;background:red"></div>
+		<div id="actionArea">
+			<form class="settingsForm">
+				<h2>Please choose your settings:</h2>
+				
+				<h3>Show me</h3>
+				<div class="fancyRadio">
+					<input type="radio" name="gender" id="m" checked>
+					<label for="m">Men</label>
+
+					<input type="radio" name="gender" id="f">
+					<label for="f">Ladies</label>
+				</div>
+
+				<h3>Youngest I'd go</h3>
+				<div class="fancyRange">
+					<input type="range" name="ageMin" id="ageMin" min=18 max=60 step=1>
+					<label for="ageMin">x</label>
+				</div>
+
+				<h3>Oldest I'd go</h3>
+				<div class="fancyRange">
+					<input type="range" name="ageMax" id="ageMax" min=18 max=60 step=1>
+					<label for="ageMin">x</label>
+				</div>
+			</form>
+			<div class="gallery"></div>
+			<div class="history"></div>
+		</div>
+
+		<footer>
+			<a href="#">Settings</a> | <a href="#">History</a>
+		</footer>
+	</div>
 
 	<!-- ADDING HELPER JAVASCRIPT -->
 	<script src="js/lib/jquery.js"></script>
-	<script src="js/lib/swipe.js"></script>
 
 	<!-- ADDOING OUR OWN JAVASCRIPT -->
 	<script src="js/app/binneder.js"></script>

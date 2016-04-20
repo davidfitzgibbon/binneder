@@ -1,5 +1,67 @@
-header {
+body {
 	font-family: 'Maven Pro', sans-serif;
+}
+
+#stage {
+	height: 100%;
+	width: 100%;
+}
+
+header,
+footer {
 	text-align: center;
 	color: red;
+	width: 100%;
+	background: pink;
+	height: 10vh;
+	line-height: 10vh;
+}
+
+#actionArea {
+	height: 80vh;
+	width: 100%;
+	padding: .5em 1em;
+}
+
+h3 {
+	padding-top: 1em;
+}
+.fancyRadio {
+	display: inline-block;
+	width: 100%;
+}
+.fancyRadio input {
+	display: none;
+}
+.fancyRadio label {
+	width: 50%;
+	display: block;
+	float: left;
+	padding: .5em 0;
+	text-align: center;
+	background: white;
+	transition: all .2s;
+	cursor: pointer;
+}
+.fancyRadio input:checked + label {
+	background: lightgreen;
+	cursor: default;
+}
+
+.fancyRange {
+	display: inline-block;
+	width: 100%;
+}
+.fancyRange input,
+.fancyRange label {
+	display: inline-block;
+	line-height: 1.4em;
+}
+.fancyRange input {
+	width: 88%;
+	cursor: pointer;
+}
+.fancyRange label {
+	width: 10%;
+	text-align: center;
 }
