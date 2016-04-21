@@ -23,12 +23,6 @@ $(function() {
 
 	// SEARCH PAGE
 		var search = $('.search .whiteBackground');
-		var apiURL = 'https://randomuser.me/api/?results=10&noinfo';
-		if ( localStorage.gender === "m" ){
-			apiURL+="&gender=male";
-		} else {
-			apiURL+="&gender=female";
-		}
 
 		var template = "";
 			template += "<div class=person>";
@@ -88,18 +82,32 @@ $(function() {
 		var displayResults = function ( results ) {
 			search.html('');
 			activeList = results;
+			activeItem = 0;
 			nextCard();
 		}
 
-		$.ajax({
-			url: apiURL,
-			dataType: 'json',
-			success: function(data){
-				displayResults(data.results);
-			},
-			error: function(data) {
-				search.html('Error, please try again later...')
+		var loadResults = function () {
+			var apiURL = 'https://randomuser.me/api/?results=10&noinfo';
+			if ( localStorage.gender === "f" ){
+				apiURL+="&gender=female";
+			} else {
+				apiURL+="&gender=male";
 			}
+			$.ajax({
+				url: apiURL,
+				dataType: 'json',
+				success: function(data){
+					displayResults(data.results);
+				},
+				error: function(data) {
+					search.html('Error, please try again later...')
+				}
+			});
+		}
+
+
+		$('footer').delegate('.search', 'click', function() {
+			setTimeout(loadResults(), 100);
 		});
 
 	// HISTORY
@@ -156,7 +164,7 @@ $(function() {
 			changeStep($(this).attr('class'));
 		})
 
-		if ( startOnSearch ) { changeStep('search'); }
+		if ( startOnSearch ) { changeStep('search'); loadResults(); }
 		// if ( startOnSearch ) { changeStep('history'); }
 
 });
