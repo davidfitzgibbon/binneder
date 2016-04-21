@@ -1,5 +1,17 @@
 body {
 	font-family: 'Maven Pro', sans-serif;
+	color: #444;
+	font-size: 32px;
+}
+
+h3 {
+	padding-top: 1em;
+}
+a,
+a:hover,
+a:focus {
+	text-decoration: none;
+	color: red;
 }
 
 #stage {
@@ -12,20 +24,49 @@ footer {
 	text-align: center;
 	color: red;
 	width: 100%;
-	background: pink;
 	height: 10vh;
 	line-height: 10vh;
+	z-index: 2;
+}
+header {
+	border-bottom: 1px solid #ddd;
+}
+footer {
+	border-top: 1px solid #ddd;
+}
+footer a {
+	font-size: 1.4em;
+	padding: 0 .75em;
+    line-height: 10vh;
+    vertical-align: middle;
+}
+footer a.search {
+	font-size: 3em;
 }
 
 #actionArea {
 	height: 80vh;
 	width: 100%;
-	padding: .5em 1em;
+	padding: .5em;
+	background: #ffe9e9;
+	z-index: 1;
+}
+#actionArea > * {
+	display: none;
+	height: 100%;
+}
+#actionArea .active {
+	display: block;
+}
+#actionArea .whiteBackground {
+	background: white;
+	padding: .5em;
+	height: 100%;
+	border-radius: 3px;
+	position: relative;
+	overflow: scroll;
 }
 
-h3 {
-	padding-top: 1em;
-}
 .fancyRadio {
 	display: inline-block;
 	width: 100%;
@@ -64,4 +105,71 @@ h3 {
 .fancyRange label {
 	width: 10%;
 	text-align: center;
+}
+
+/* PERSON */
+.search .person {
+	text-align: center;
+}
+.search .person img {
+	width: 100%;
+}
+.search .person p {
+	font-size: 2em;
+	padding-top: .5em;
+}
+
+.search .display {
+	position: absolute;
+	width: 2.5em;
+	height: 2.5em;
+	line-height: 2em;
+	border-radius: 2em;
+	border: .25em solid #ddd;
+	bottom: .5em;
+	text-align: center;
+	font-size: 2em;
+	font-weight: bold;
+}
+.search .display.no {
+	color: red;
+	left: 2em;
+}
+.search .display.yes {
+	color: green;
+	right: 2em;
+}
+
+.search .next {
+	position: absolute;
+	top: 0;
+	height: 100%;
+	width: 50%;
+}
+.search .next.no {
+	left: 0;
+	/*background: red;*/
+}
+.search .next.yes {
+	right: 0;
+	/*background: lightgreen;*/
+}
+
+.history .historyItem {
+	padding: .5em;
+}
+.history .historyItem img,
+.history .historyItem span {
+	display: inline-block;
+	vertical-align: middle;
+}
+.history .historyItem span {
+	font-size: 2em;
+	padding-left: 1em;
+}
+.history .historyItem.y {
+	background: #dfd;
+}
+.history .historyItem.n {
+	background: #fdd;
 }

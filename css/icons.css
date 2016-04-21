@@ -1,0 +1,55 @@
+@charset "UTF-8";
+
+/* untitled-font-1 */
+@font-face {
+  font-family: "untitled-font-1";
+  src:url("https://file.myfontastic.com/ky9niAzNyxzdMpkPEUxkE8/fonts/1461266287.eot");
+  src:url("https://file.myfontastic.com/ky9niAzNyxzdMpkPEUxkE8/fonts/1461266287.eot?#iefix") format("embedded-opentype"),
+    url("https://file.myfontastic.com/ky9niAzNyxzdMpkPEUxkE8/fonts/1461266287.woff") format("woff"),
+    url("https://file.myfontastic.com/ky9niAzNyxzdMpkPEUxkE8/fonts/1461266287.ttf") format("truetype"),
+    url("https://file.myfontastic.com/ky9niAzNyxzdMpkPEUxkE8/fonts/1461266287.svg#1461266287") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+[data-icon]:before {
+  font-family: "untitled-font-1" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "untitled-font-1" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-search:before {
+  content: "\67";
+}
+.icon-no:before {
+  content: "\68";
+}
+.icon-history:before {
+  content: "\69";
+}
+.icon-settings:before {
+  content: "\6a";
+}
+.icon-yes:before {
+  content: "\6b";
+}

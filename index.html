@@ -4,8 +4,10 @@
 	<meta charset="UTF-8">
 	<title>Binned'er</title>
 
-	<!-- ADDING FONT -->
+	<!-- ADDING GOOGLE FONT -->
 	<link href='https://fonts.googleapis.com/css?family=Maven+Pro:400' rel='stylesheet' type='text/css'>
+	<!-- ADDING ICON FONT -->
+	<link href="css/icons.css" rel="stylesheet">
 
 	<!-- ADDING STYLES -->
 	<link rel="stylesheet" href="css/reset.css">
@@ -24,7 +26,7 @@
 		</header>
 
 		<div id="actionArea">
-			<form class="settingsForm">
+			<form class="settingsForm whiteBackground active">
 				<h2>Please choose your settings:</h2>
 				
 				<h3>Show me</h3>
@@ -39,21 +41,31 @@
 				<h3>Youngest I'd go</h3>
 				<div class="fancyRange">
 					<input type="range" name="ageMin" id="ageMin" min=18 max=60 step=1>
-					<label for="ageMin">x</label>
+					<label for="ageMin">?</label>
 				</div>
 
 				<h3>Oldest I'd go</h3>
 				<div class="fancyRange">
 					<input type="range" name="ageMax" id="ageMax" min=18 max=60 step=1>
-					<label for="ageMin">x</label>
+					<label for="ageMin">?</label>
 				</div>
 			</form>
-			<div class="gallery"></div>
-			<div class="history"></div>
+			<div class="search">
+				<div class="whiteBackground">
+					<h1>Searching for humans...</h1>
+				</div>
+			</div>
+			<div class="history">
+				<div class="whiteBackground">
+					No history yet
+				</div>
+			</div>
 		</div>
 
 		<footer>
-			<a href="#">Settings</a> | <a href="#">History</a>
+			<a href="#" class="settingsForm"><span class="icon-settings"></span></a>
+			<a href="#" class="search"><span class="icon-search"></span></a>
+			<a href="#" class="history"><span class="icon-history"></span></a>
 		</footer>
 	</div>
 
