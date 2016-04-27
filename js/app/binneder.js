@@ -47,6 +47,9 @@ $(function() {
 			activeTemplate = activeTemplate.replace('${img}', item.picture.large);
 			activeTemplate = activeTemplate.replace('${name}', item.name.first.toUpperCase());
 
+			// HIDE THE OLD ONE
+			$('.search div').addClass('fadeOut');
+
 			search.html(activeTemplate);
 		}
 
